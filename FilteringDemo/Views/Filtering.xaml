@@ -19,18 +19,15 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid x:Name="headerGrid" Grid.Row="0" HeightRequest="60" ColumnSpacing="0" RowSpacing="0"  >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="60" />
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0" x:Name="seachbar_Grid" Margin='{OnPlatform  Default="10,0,10,0", Android="0", MacCatalyst="10,0,10,0"}' BackgroundColor="#FFFFFF">
+               
+                <Grid x:Name="seachbar_Grid" Margin='{OnPlatform  Default="10,0,10,0", Android="0", MacCatalyst="10,0,10,0"}' BackgroundColor="#FFFFFF">
                     <SearchBar x:Name="filterText" BackgroundColor="White"
                           Grid.Row="0"
                           Grid.Column="0"
                                Margin='{OnPlatform Default=0,iOS="0,5,0,0", UWP="0,5,0,0", MacCatalyst="0,5,0,0"}'                               
                                FontSize="18"
                                IsVisible="true"
-                               HeightRequest="50" WidthRequest="420"
+                               HeightRequest="50" WidthRequest='{OnPlatform Android="420"}'
                           Placeholder="Search here to filter"  >
                     </SearchBar>
                 </Grid>

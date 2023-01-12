@@ -1,4 +1,6 @@
-﻿namespace FilteringDemo;
+﻿using Syncfusion.Maui.Core.Hosting;
+
+namespace FilteringDemo;
 
 public static class MauiProgram
 {
@@ -13,7 +15,7 @@ public static class MauiProgram
 				fonts.AddFont("Roboto-Medium.ttf", "RobotoMedium");
 				fonts.AddFont("Roboto-Regular.ttf", "RobotoRegular");
 			});
-
+		builder.ConfigureSyncfusionCore();
 		return builder.Build();
 	}
 }
